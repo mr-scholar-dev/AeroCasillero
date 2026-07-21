@@ -80,6 +80,36 @@ git branch -M main
 git push -u origin main
 ```
 
+### Si todavía no tienes acceso al GitLab del curso
+
+Si al intentar entrar o subir el proyecto aparece un error de permisos, como `422` o un rechazo de cambio, significa que todavía no tienes autorización en ese grupo o repositorio. Cuando el profesor o el administrador te den acceso:
+
+1. inicia sesión con tu cuenta de GitLab
+2. abre el proyecto o grupo del curso
+3. confirma que puedes ver el repositorio
+4. vuelve a abrir la carpeta del proyecto en tu equipo
+5. verifica el remoto con:
+
+```bash
+git remote -v
+```
+
+6. si hace falta, ajusta el remoto del proyecto al repositorio del curso:
+
+```bash
+git remote set-url origin https://git.isw.utm.ac.cr/isw-524/2026/ii-2026/g3-k/grupo-40.git
+```
+
+7. luego sube los cambios:
+
+```bash
+git add .
+git commit -m "Update project before delivery"
+git push -u origin main
+```
+
+Si GitLab pide contraseña, pega el token de acceso personal en ese momento, no lo guardes dentro del proyecto.
+
 ## Recomendaciones
 
 - No subir carpetas generadas como `bin`, `obj` o `.vs`.
@@ -95,4 +125,3 @@ El proyecto ya cuenta con:
 - documentación técnica
 - script SQL inicial
 - conexión preparada para SQL Server
-
